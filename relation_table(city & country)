@@ -1,0 +1,25 @@
+<?php
+$sql = "select c.id, c.name, (select count(id) from city where countryId = c.id) as cities from country as c";
+$table = mysqli_query($cn, $sql);
+
+$i = 1;
+while($row = mysqli_fetch_assoc($table))
+{
+	print $i++.' : '.htmlentities($row["name"]).' [ <a href="#" title="'.findCity($row["id"]).'">'.$row["cities"].'</a> ] '.'<br>';
+}
+
+
+function findCity($cid)
+{
+	global $cn;
+	$sql = "select id, name from city where countryid = ".$cid;
+	$table = mysqli_query($cn, $sql);
+	$s = "";
+	while($row = mysqli_fetch_assoc($table))
+	{
+		$s .= $row["name"]."\n";	
+	}
+	return $s;
+}
+
+?>
