@@ -1,0 +1,22 @@
+/* CSS Document */
+
+.std
+{
+	width:440px;
+	height:300px;
+	float:left;
+	box-shadow:5px 3px rgba(184,177,177,1.00);
+	border-radius:3px 10px 3px 10px;
+	margin:15px;
+	padding:10px;
+	position:relative;
+	
+	background:rgba(88,239,189,0.22);
+}
+
+.paging
+{
+float:none;
+display:inline-table;
+text-align:justify;
+}
