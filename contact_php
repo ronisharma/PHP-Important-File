@@ -1,0 +1,22 @@
+<?php
+					if(isset($_POST["submit"]))
+					{
+						$name=$_POST["name"];
+						$company=$_POST["company"];
+						$address=$_POST["address"];
+						$phone=$_POST["phone"];
+						$email=$_POST["email"];
+						$information=$_POST["information"];
+						
+						$body="Name : ".$name.  "  Company:  ".$company."   Address  ".$address." Phone  : ".$phone."   Information:  ".$information;
+						$to="monarchtc18@gmail.com";
+						mail($to,$email,$body);
+						print '<span style="color:red;"><b>Your Message Successfully Send</b></span>';
+						$name="";
+						$company="";
+						$address="";
+						$phone="";
+						$email="";
+						$information="";
+					}
+					?>
