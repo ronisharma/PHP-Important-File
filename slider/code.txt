@@ -1,0 +1,28 @@
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/main.js"></script>
+<!-- //js -->
+
+<!-- bxSlider CSS file -->
+<script src="bxslider/jquery.bxslider.min.js"></script>
+<link href="bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+
+
+<ul class="bxslider">
+  <li><img src="/images/pic1.jpg" /></li>
+  <li><img src="/images/pic2.jpg" /></li>
+  <li><img src="/images/pic3.jpg" /></li>
+  <li><img src="/images/pic4.jpg" /></li>
+</ul>
+
+
+<script type="text/javascript">	
+$(document).ready(function(){
+	$('.bxslider').bxSlider({
+  auto: true,
+  autoControls: true
+});
+	});
+</script>
+ 
