@@ -1,0 +1,5 @@
+ <div id="video">
+        <video autoplay="autoplay" muted="muted" poster="wall_icons/my.jpg" width="100%" loop>
+            <source src="https://www.youtube.com/watch?v=AQOX7dtbmiQ" type="video/mp4" type="video/mp4">
+        </video>
+    </div>
