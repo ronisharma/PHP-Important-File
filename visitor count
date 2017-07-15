@@ -1,0 +1,31 @@
+<?php 
+$host     = "localhost";
+$username = "root";
+$password = "";
+$db_name  = "test";
+$tbl_name = "visitor_counter";
+
+mysql_connect("$host", "$username", "$password")or 
+die("cannot connect to server ");
+mysql_select_db("$db_name")or die("cannot select DB"); 
+
+$sql      = "SELECT * FROM $tbl_name";
+$result   = mysql_query($sql);
+$rows     = mysql_fetch_array($result);
+$counter  = $rows['counts'];
+
+if(empty($counter)){
+$counter = 1;
+$sql1    = "INSERT INTO $tbl_name(counts) VALUES('$counter')";
+$result1 = mysql_query($sql1);
+}
+
+echo "You 're visitors No. "; 
+echo $counter; 
+
+$plus_counter=$counter+1; 
+$sql2    = "update $tbl_name set counts='$plus_counter'";
+$result2 = mysql_query($sql2); 
+mysql_close();
+
+?>
